@@ -1,0 +1,290 @@
+/**{
+	margin:0;
+	padding:0;
+}*/
+
+*,*:before,*:after{
+	margin:0;
+	padding:0;
+	box-sizing:inherit;
+}
+
+body{
+	background-color:rgba(238,238,238,1);/*34, 49, 63      8,10,48*/
+	font-family: "Arial",Sans-serif;
+}
+
+header{
+	background-color:rgba(238,238,238,1);
+	text-align: end;
+}
+
+.menu{
+	display:flex;
+	height:60px;
+	width:100%;
+	/*box-shadow:0px 2px 3px rgba(0,0,0,0.4);*/
+	color:rgba(31, 58, 147,1);
+	font-family: 'Passion One';
+	line-height:70px;
+	position:absolute;
+	top:0;
+}
+
+.menu li{
+	flex:1;	
+	text-align:center;
+	list-style:none;	
+}
+
+.menu a{
+	text-decoration:none;	
+	outline:none;
+	color:rgba(31, 58, 147,1);
+}
+
+.menu li:nth-child(1){
+	flex:12;	
+}
+
+.menu li:nth-child(4){
+	flex:2;	
+}
+
+.menu li:nth-child(5){
+	flex:2;	
+}
+
+#title{
+	display:flex;
+	flex:1;
+}
+
+.container{
+	display: block;
+	background-color: white;
+	height:50%;
+}
+
+.form-log, .form-reg{
+	display:none;
+	position:relative;
+	top:55px;
+	margin-right:20px;
+	/*flex:1 1 20%;
+	flex-direction:column;*/
+}
+
+.astronaut{
+	background-image:url('../img/astro.svg');
+	background-repeat:no-repeat;
+	background-size:575px;
+	z-index:-1;	
+	height:750px;
+	width: 100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	margin-left:75px;
+}
+
+#title-principal a, #title-secondary, #title-mini, #title-logged a{	
+	position:absolute;
+	cursor:pointer;
+	font-family: 'Oswald', sans-serif;
+}
+
+#title-principal a{
+	color:rgba(51, 110, 123,1);
+	text-shadow:0px 0px 3px rgba(0,0,0,0.3);
+	padding-left:14px;
+	padding-right:14px;
+	left:650px;
+	top:140px;	
+	font-size:140px;
+	text-decoration:none;
+	transition:all 0.25s;
+}
+
+
+#title-principal a:hover{
+	color:rgba(243, 156, 18,0.9);	/*248, 148, 6    246, 36, 89*/
+	text-shadow:0px 0px 7px rgba(247, 202, 24,0.9);
+}
+
+#title-secondary{
+	text-shadow:0px 0px 3px rgba(0,0,0,0.3);
+	color:rgba(51, 110, 123,1);
+	left:830px;
+	top:206px;	
+	font-size:85px;
+}
+
+#title-mini{
+	color:rgba(246, 71, 71,0.9);
+	left:807px;
+	top:267px;	
+	font-size:32px;
+	transform:rotate(-1deg);
+}
+
+#title-logged a{
+	color:rgba(51, 110, 123,1);
+	text-shadow:0px 0px 3px rgba(0,0,0,0.3);
+	padding-left:14px;
+	padding-right:14px;
+	left:20px;
+	top:20px;	
+	font-size:36px;
+	text-decoration:none;
+}
+
+.former{
+	display:flex;
+	position:absolute;
+	top:355px;
+	left:685px;
+	width:515px;
+	background-color:rgba(108, 122, 137,1);/*65, 131, 215*/
+	border:2px solid rgba(108, 122, 137,1);
+	border-radius:3px;
+}
+
+#form-search{
+	flex:9;
+	/*width:400px;*/
+	height:28px;
+	padding:5px 14px 5px 14px;
+	border:0px;
+	border-radius:3px 0px  0px 3px;	
+	font-size:15px;
+	background-color:rgba(245, 245, 245,1);
+}
+
+#form-submit{
+	flex:1;	
+	background-color:rgba(108, 122, 137,1);
+	background-image:url('../img/lupa.png');
+	background-size:23px;
+	background-repeat:no-repeat;
+	background-position:center;
+	border-radius:0px 3px 3px 0px;	
+	border:2px solid rgba(108, 122, 137,1);
+	position:relative;
+	left:-1px;
+	cursor:pointer;
+}
+
+#form-submit:hover{
+	opacity:0.7;
+}
+
+input:focus{
+	outline: none;	
+}
+
+.admin{
+	margin-top:70px;
+	margin-left:5%; 
+}
+
+
+.form-admin{
+	margin-top:26px;
+}
+
+.form-admin div{
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+.form-user{
+	width:750px;
+	border:2px solid rgba(32,32,32,0.3);
+	margin-top:15px;
+	border-collapse: collapse;
+}
+
+.form-user td{
+	/*border:2px solid rgba(32,32,32,0.75);
+	/*border-left:2px solid rgba(32,32,32,0.4);*/
+	padding:8px;
+}
+
+.form-user tr td:last-child{
+	text-align:center;
+}
+
+.form-user tr{
+	background-color:rgba(250,250,250,0.9);
+}
+
+.form-user tr:nth-child(odd){
+	background-color:rgba(190, 144, 212,0.25);
+}
+
+.message{
+	position:absolute;
+	left:86%;
+	top:93%;
+	background-color:rgba(239, 72, 54,0.8);
+	color:rgba(244,244,244,0.9);
+	border-radius:3px;
+	height:20px;
+	padding:12px;
+}
+
+#admin-todos, #admin-quitar{
+	background-color:rgba(191, 85, 236,0.7);
+	border:0;
+	padding:7px;
+	color:rgba(244,244,244,1);	
+	border-radius:3px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+}
+
+#admin-todos:hover, #admin-quitar:hover{
+	background-color:rgba(191, 85, 236,0.8);
+	cursor:pointer;
+}
+
+#form-insert, #form-update, #form-delete{
+	background-color:rgba(52, 73, 94,0.8);
+	border:0;
+	color:rgba(244,244,244,0.9);	
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	padding:7px;
+	border-radius:2px;
+	margin-left:25px;
+}
+
+#form-insert:hover, #form-update:hover, #form-delete:hover{
+	background-color:rgba(52, 73, 94,0.6);
+	cursor:pointer;
+}
+
+#edicion-admin{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:26px;
+}
+
+#anuncios-title h1{
+	position:absolute;
+	top:55px;
+	left:5%;
+	font-family: 'Passion One';
+}
+
+.content-anuncios{
+	position:relative;
+	top:135px;
+	left:70px;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.container-anuncio{
+	flex:1;
+}
